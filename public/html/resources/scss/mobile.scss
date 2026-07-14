@@ -1,0 +1,133 @@
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav {
+        flex-direction: row;
+    }
+
+    header {
+        nav {
+            .nav-item {
+                .nav-link {
+                    max-width: 15vw;
+                }
+            }
+        }
+    }
+
+    .programs {
+        &.grid {
+            .row {
+                .col-12 {
+                    width: 50%;
+                    .card {
+                        height: 100%;
+                        .card-body {
+                            display: flex;
+
+                            .row {
+                                flex-direction: column;
+
+                                > .col-md-4,
+                                > .col-md-5,
+                                > .col-md-3 {
+                                    width: 100%;
+                                }
+
+                                > .col-md-5 {
+                                    flex: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .programs {
+        &.grid {
+            .row {
+                .col-12 {
+                    width: 33.333%;
+                    .card {
+                        height: 100%;
+                        .row {
+                            > .col-md-4,
+                            > .col-md-5,
+                            > .col-md-3 {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        &.bg-white {
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .nav-link {
+                padding: 0.5rem;
+            }
+        }
+    }
+    header {
+        nav {
+            .dropdown-toggle::after {
+                margin: 0;
+                position: absolute;
+                right: 1rem;
+                top: 43%;
+            }
+        }
+
+        img {
+            &.logo {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .programs {
+        .badge {
+            &.badge-bottom {
+                display: none;
+            }
+            &.badge-top {
+                display: block !important;
+            }
+        }
+    }
+
+    .card {
+        .card-title {
+            font-size: 1.25rem;
+        }
+    }
+
+    .page {
+        &.news {
+            .breadcrumb {
+                .breadcrumb-item {
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}

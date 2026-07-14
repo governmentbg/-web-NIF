@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS tree_data ;
+DROP TABLE IF EXISTS site_lang ;
+DROP TABLE IF EXISTS site_domain ;
+DROP TABLE IF EXISTS redirects ;
+DROP TABLE IF EXISTS languages ;
+DROP TABLE IF EXISTS sites ;
+DROP TABLE IF EXISTS tree_struct ;
+DROP TABLE IF EXISTS log_public ;
+DROP TABLE IF EXISTS menus ;
+DROP TABLE IF EXISTS templates ;

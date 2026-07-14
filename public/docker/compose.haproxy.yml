@@ -1,0 +1,11 @@
+services:
+    balancepub:
+        image: haproxy:latest
+        ports:
+            - "8081:80"
+        volumes:
+            - ${WEBPUBLIC:-.}/:/usr/local/etc/haproxy:ro
+        depends_on:
+            - webpub
+    webpub:
+        ports: !reset []

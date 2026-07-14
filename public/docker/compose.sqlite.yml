@@ -1,0 +1,10 @@
+volumes:
+    sqlite:
+
+services:
+    apppub:
+        environment:
+            DATABASE: "sqlite:///sqlite/db.sqlite"
+        volumes:
+            - sqlite:/sqlite:rw
+

@@ -1,0 +1,28 @@
+volumes:
+    shared:
+
+services:
+    webpub:
+        image: nginx:latest
+        ports:
+            - "8081:80"
+        volumes:
+            - ${WEBPUBLIC:-.}/../public/:/var/www/html/webpublic/public/
+            - shared:/shared:ro
+            - ${WEBPUBLIC:-.}/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+        depends_on:
+            - apppub
+    apppub:
+        build:
+            dockerfile: php.dockerfile
+        environment:
+            DATABASE: "postgre://${USER}@host.docker.internal/webadmin?schema=public&persist=1"
+            LOG: syslog
+        volumes:
+            - ${WEBPUBLIC:-.}/../:/var/www/html/webpublic/
+            - shared:/shared
+            - ${WEBPUBLIC:-.}/.env.php:/var/www/html/webpublic/.env.php
+            - ${WEBPUBLIC:-.}/.env:/var/www/html/webpublic/.env:ro
+        entrypoint: sh -c "cd /var/www/html/webpublic/ && php ./scripts/run.php permissions && php-fpm"
+        depends_on:
+            - cache

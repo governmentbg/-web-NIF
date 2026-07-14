@@ -1,0 +1,16 @@
+volumes:
+    shared:
+
+services:
+    webpub:
+        image: !reset null
+        build:
+            dockerfile: httpd.dockerfile
+        volumes:
+            - ${WEBPUBLIC:-.}/../:/var/www/html/webpublic/
+            - shared:/shared:ro
+        depends_on:
+            - apppub
+    apppub:
+        environment:
+            SENDFILE: "apache:/shared/sendfile"
