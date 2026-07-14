@@ -1,0 +1,1 @@
+INSERT INTO modules ("name", slug, loaded, classname, pos, settings) VALUES('banners', 'banners', 1, '\nif\modules\site\banners\BannersModule', 11, NULL);

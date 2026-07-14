@@ -1,0 +1,1 @@
+INSERT INTO modules ("name", slug, loaded, classname, pos, settings) VALUES('news_categories', 'news_categories', 1, '\nif\modules\site\news_categories\NewsCategoriesModule', 12, NULL);

@@ -1,0 +1,4 @@
+services:
+    apppub:
+        environment:
+            DATABASE: "mysql://root:password@database/webadmin"

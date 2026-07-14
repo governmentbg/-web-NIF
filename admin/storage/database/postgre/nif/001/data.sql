@@ -1,0 +1,1 @@
+UPDATE modules SET slug='pages', loaded=1, classname='\nif\modules\site\pages\PagesModule', pos=1, settings=NULL WHERE "name"='pages';

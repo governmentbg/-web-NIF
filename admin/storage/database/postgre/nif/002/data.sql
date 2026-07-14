@@ -1,0 +1,1 @@
+INSERT INTO modules ("name", slug, loaded, classname, pos, settings) VALUES('infoblocks', 'infoblocks', 1, '\nif\modules\site\infoblocks\InfoblocksModule', 10, NULL);

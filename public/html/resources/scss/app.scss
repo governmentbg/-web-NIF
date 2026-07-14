@@ -1,0 +1,27 @@
+@use "sass:map";
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/regular";
+
+@import "lightgallery/scss/lightgallery";
+@import "animate.css";
+
+/* Bootstrap Theme colors */
+$primary: #003b53;
+$secondary: #007fb4;
+$info: #b0dbed;
+$success: #8cc747;
+$light: #e6ebed;
+
+$card-border-radius: 1.25rem;
+$enable-negative-margins: true;
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+/* Custom styles */
+@import "site.scss";
+@import "fonts.scss";
+@import "mobile.scss";

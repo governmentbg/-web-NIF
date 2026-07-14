@@ -1,0 +1,6 @@
+services:
+    apppub:
+        build:
+            dockerfile: php.oracle.dockerfile
+        environment:
+            DATABASE: "oracle://WEBADMIN:webadmin@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=database)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=FREEPDB1)))/WEBADMIN?schema=WEBADMIN&mode=strtolower&charset=UTF8&version=12"

@@ -1,0 +1,1 @@
+UPDATE modules SET slug='news', loaded=1, classname='\nif\modules\site\news\NewsModule', pos=2, settings=NULL WHERE "name"='news';

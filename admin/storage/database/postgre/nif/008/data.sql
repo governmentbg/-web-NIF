@@ -1,0 +1,1 @@
+INSERT INTO modules ("name", slug, loaded, classname, pos, settings) VALUES('documents', 'documents', 1, '\nif\modules\site\documents\DocumentsModule', 13, NULL);

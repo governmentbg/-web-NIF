@@ -1,0 +1,6 @@
+services:
+    apppub:
+        environment:
+            DATABASE: "postgre://postgres:postgres@bouncer/postgres?schema=public&persist=1"
+        depends_on:
+          - bouncer

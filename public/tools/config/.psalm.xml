@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="2"
+    autoloader="../../vendor/autoload.php"
+    resolveFromConfigFile="true"
+    useDocblockTypes="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config"
+>
+    <projectFiles>
+        <directory name="../../app/classes" />
+        <directory name="../../public" />
+        <directory name="../../scripts" />
+        <ignoreFiles>
+            <directory name="../../vendor" />
+            <directory name="../../app/classes/*/modules/*/views" />
+            <directory name="../../app/classes/base" />
+        </ignoreFiles>
+    </projectFiles>
+    <issueHandlers>
+        <InvalidArgument>
+            <errorLevel type="suppress">
+                <referencedFunction name="vakata\collection\Collection::from" />
+            </errorLevel>
+        </InvalidArgument>
+        <RiskyTruthyFalsyComparison errorLevel="suppress" />
+        <PossiblyUndefinedArrayOffset errorLevel="suppress" />
+        <RedundantConditionGivenDocblockType errorLevel="suppress" />
+        <RedundantCastGivenDocblockType errorLevel="suppress" />
+        <RedundantCondition errorLevel="suppress" />
+        <RedundantCast errorLevel="suppress" />
+        <DocblockTypeContradiction errorLevel="suppress" />
+        <ReservedWord errorLevel="suppress" />
+        <NoValue errorLevel="suppress" />
+        <RiskyTruthyFalsyComparison errorLevel="suppress" />
+        <UndefinedMagicPropertyAssignment errorLevel="suppress" />
+        <UndefinedMagicPropertyFetch errorLevel="suppress" />
+        <UnnecessaryVarAnnotation errorLevel="suppress" />
+        <PossiblyUnusedMethod errorLevel="suppress" />
+        <PossiblyUnusedProperty errorLevel="suppress" />
+        <PossiblyUnusedReturnValue errorLevel="suppress" />
+        <PossiblyFalseOperand errorLevel="suppress" />
+        <PossiblyUnusedParam errorLevel="suppress" />
+        <UnusedVariable errorLevel="suppress" />
+        <UnusedFunctionCall errorLevel="suppress" />
+        <UnusedClass errorLevel="suppress" />
+    </issueHandlers>
+    <universalObjectCrates>
+        <class name="vakata\database\schema\Entity" />
+    </universalObjectCrates>
+</psalm>

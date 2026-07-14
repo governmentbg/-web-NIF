@@ -1,0 +1,1 @@
+INSERT INTO modules ("name", slug, loaded, classname, pos, settings) VALUES('program_categories', 'program_categories', 1, '\nif\modules\site\program_categories\ProgramCategoriesModule', 13, NULL);
